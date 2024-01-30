@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+   
+   body {
+    font-family: Arial, sans-serif;
+ line-height: 1.6;
+ background-image: url("imagenes/fondoContacto.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+
+ display: flex;
+ justify-content: flex-end;
+
+   }
+   
+   .background-container {
+    float: left;
+    width: 50%;
+   }
+   
+   .background-container img {
+    width: 100%;
+   }
+   
+   .container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+   }
+   
+   .form-container {
+    float: left;
+    width: 70%;
+   }
+   
+   .text-container {
+    float: left;
+    width: 30%;
+    padding-left: 60px;
+   }
+   
+   .text-container h2 {
+    text-align: justify;
+    
+   }
+   
+   .text-container p {
+    text-align: justify;
+    
+   }
+   
+   h1 {
+    text-align: center;
+    margin-bottom: 30px;
+   }
+   
+   label {
+    display: block;
+    margin-bottom: 10px;
+   }
+   
+   input[type="text"],
+   input[type="email"],
+   select,
+   textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   }
+   
+   textarea {
+    resize: vertical;
+   }
+   
+   .g-recaptcha {
+    margin-bottom: 20px;
+   }
+   
+   input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   input[type="submit"]:hover {
+    background-color: #45a049;
+   }
+   
+   .privacy-terms {
+    text-align: center;
+    margin-top: 30px;
+   }
+   
+   .privacy-terms p {
+    display: inline-block;
+    margin-right: 10px;
+   }
+   
+   .privacy-terms p:last-child {
+    margin-right: 0;
+   }
+
+   
+   
+
+   @media (min-width: 768px) {
+    .container {
+     max-width: 750px;
+    }
+   }
+   
+   @media (min-width: 992px) {
+    .container {
+     max-width: 970px;
+    }
+   }
+   
+   @media (min-width: 1200px) {
+    .container {
+     max-width: 1170px;
+    }
+   }
+  
+   
