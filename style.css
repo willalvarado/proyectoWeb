@@ -1,15 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(../img/bg2.jpg) no-repeat center top;
+    background: url(../imagenes/bg2.jpg) no-repeat center top;
     background-size: cover;
     font-family: sans-serif;
     height: 100vh;
   }
   
   .login-box {
-    width: 320px;
-    height: 420px;
+    width: 420px;
+    height: 505px;
     background: #000;
     color: #fff;
     top: 50%;
@@ -34,6 +34,18 @@ body {
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
+  }
+  .login-box h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .login-box h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: initial;
+    font-size: 12px;
   }
   
   .login-box label {
