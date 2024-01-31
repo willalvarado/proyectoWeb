@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #mititulo {
+            background-color: #4184b1;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-form {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .precios {
+        color: #c9baba; /* Color gris */
+    }
+    .precios h2 {
+        font-size: 16px; /* Tamaño de letra para el elemento h2 dentro de .precios */
+    }
+
+    </style>
+</head>
+<body>
+    <h1 id="mititulo">Compu YME CompuCompras</h1>
+
+    <div class="container container-form mt-4">
+        <div class="accordion" id="elementosAComprarAccordion">
+            <div class="card" id="targeta">
+                <div class="card-header d-flex align-items-center justify-content-between" id="item1Heading">
+                    <h2 class="mb-0" id="elementoDeCompra">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#item1Collapse" aria-expanded="true" aria-controls="item1Collapse">
+                            Elementos a Comprar 1
+                        </button>
+                    </h2>
+                    <div class="precios"> 
+                        <h2 class="mb-0">
+                            $699.99
+                        </h2>
+                    </div> 
+                </div>    
+                <div id="item1Collapse" class="collapse show" aria-labelledby="item1Heading" data-parent="#elementosAComprarAccordion">
+                    <div class="card-body d-flex align-items-center">
+                        <div style="display: flex;" class="align-self-center">
+                            <img src="imagenes/computadoraEscritorio.webp" width="60 px">
+                            <div class="ml-2">
+                                <p>Computador Todo En Uno Hp I5-12va Ssd 512gb/8gb/all In One</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto"> 
+                            <p>Precio: $699.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header d-flex align-items-center justify-content-between" id="item2Heading">
+                    <h2 class="mb-0" id="elementoDeCompra">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" 
+                        data-target="#item2Collapse" aria-expanded="true" aria-controls="item2Collapse">
+                            Elementos a Comprar 2
+                        </button>
+                    </h2>
+                    <div class="precios"> 
+                        <h2 class="mb-0">
+                            $675.00
+                        </h2>
+                    </div> 
+                </div>
+                <div id="item2Collapse" class="collapse show" aria-labelledby="item1Heading" data-parent="#elementosAComprarAccordion">
+                    <div class="card-body d-flex align-items-center">
+                        <div style="display: flex;" class="align-self-center">
+                            <img src="imagenes/computadoraHP.webp" width="60 px">
+                            <div class="ml-2">
+                                <p>Computador Todo En Uno Hp I5 12va Ssd 1000gb/16gb/all In One</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto"> 
+                            <p>Precio: $675.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                 
+
+            
+    </div>
+    <div class="card">
+        <div class="card-header d-flex align-items-center justify-content-between" id="agregarProductoHeading">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" id="agregarProductoBtn" onclick="agregarProducto()">
+                    Agregar más productos
+                </button>
+            </h2>
+        </div>
+    </div>   
+    
+    
+    <div class="card mt-4">
+        <div class="card-body d-flex align-items-center justify-content-between">
+            <div>
+                <h2 class="mb-0">Precio Total</h2>
+            </div>
+            <div class="precios">
+                <h2 id="precioTotal" class="mb-0">$0.00</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container container-form">
+        <form>
+            <div class="container">
+                <h3>Datos del comprador</h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="name" class="col-form-label">Nombre</label>
+                            </td>
+                            <td>
+                                <input id='name' class="form-control" placeholder='Ingrese el nombre' type="text" name="name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="edad" class="col-form-label">Edad</label>
+                            </td>
+                            <td>
+                                <input id='edad' class="form-control" placeholder='Ingrese la edad' type="text" name="edad"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="direccion" class="col-form-label">Dirección</label>
+                            </td>
+                            <td>
+                                <input id='direccion' class="form-control" placeholder='Ingrese la direccion' type="text" name="direccion"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for='email' class="col-form-label">E-mail</label>
+                            </td>
+                            <td>
+                                <input id='email' name='email' class="form-control" placeholder='Ingrese un correo' type="text"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="form-group">
+                    <label for="cardNumber">Número de Tarjeta</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="**** **** **** ****">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="fecha">Fecha de vencimiento</label>
+                        <input type="text" class="form-control" id="fecha" placeholder="MM/YY">
+                    </div>
+                
+                    <div class="form-group col-md-6">
+                        <label for="codigo">Código de seguridad</label>
+                        <input type="text" class="form-control" id="codigo" placeholder="1234">
+                    </div>
+                </div>
+            </div>                 
+            
+            <button type="submit" class="btn btn-primary">Pagar</button>
+        </form>
+    </div>
+
+    <script>
+        function agregarProducto() {
+            document.getElementById('precioTotal').textContent = '$0.00';
+            // Generar un precio aleatorio (puedes ajustar este rango según tus necesidades)
+            var nuevoPrecio = (Math.random() * (100 - 1) + 1).toFixed(2);
+            var elementosDeCompra = document.querySelectorAll('[id^="elementoDeCompra"]');
+            // Obtener el número actual de elementos a comprar
+            var numeroElementos = document.querySelectorAll('.card[id^="nuevoElemento"]').length +elementosDeCompra.length+ 1;
+    
+            // Crear el nuevo elemento dinámicamente
+            var nuevoElementoHTML = `
+            <div class="card" id="nuevoElemento${numeroElementos}">
+                <div class="card-header d-flex align-items-center justify-content-between" id="nuevoItemHeading${numeroElementos}">
+                    <h2 class="mb-0" id="nuevoElementoDeCompra${numeroElementos}">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" 
+                            data-target="#nuevoItemCollapse${numeroElementos}" aria-expanded="true" 
+                            aria-controls="nuevoItemCollapse${numeroElementos}">
+                            Elemento a comprar ${numeroElementos}
+                        </button>
+                    </h2>
+                    <div class="precios"> 
+                        <h2 class="mb-0">
+                            $${nuevoPrecio}
+                        </h2>
+                    </div> 
+                </div>
+                <div id="nuevoItemCollapse${numeroElementos}" class="collapse show" 
+                    aria-labelledby="nuevoItemHeading${numeroElementos}" data-parent="#elementosAComprarAccordion">
+                    <div class="card-body d-flex align-items-center">
+                        <div style="display: flex;" class="align-self-center">
+                            <img src="ruta/a/tu/imagen.jpg" width="60 px">
+                            <div class="ml-2">
+                                <p>Descripción del nuevo producto</p>
+                            </div>
+                        </div>
+                        <div class="ml-auto"> 
+                            <p>Precio: $${nuevoPrecio}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+        // Agregar el nuevo elemento al DOM
+        document.getElementById('elementosAComprarAccordion').insertAdjacentHTML('beforeend', nuevoElementoHTML);
+
+        // Calcular y actualizar el precio total
+        actualizarPrecioTotal();
+    }
+
+    function actualizarPrecioTotal() {
+    // Obtener todos los precios y sumarlos
+    var precios = document.querySelectorAll('.precios h2');
+    var precioTotal = 0;
+
+    precios.forEach(function (precio) {
+        // Obtener el número dentro del texto del precio
+        var numero = parseFloat(precio.textContent.replace('$', ''));
+        precioTotal += isNaN(numero) ? 0 : numero;
+    });
+
+    // Actualizar el precio total en el DOM
+    document.getElementById('precioTotal').textContent = '$' + precioTotal.toFixed(2);
+}
+</script>
+    
+    
+</body>
+
+</html>
+
+
+      
+
