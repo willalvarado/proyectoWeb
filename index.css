@@ -1,0 +1,66 @@
+/** @format */
+/** @format */
+/** @format */
+
+body {
+  background-image: url("imagenes/fondoContacto.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.details {
+  background-color: rgb(120, 23, 23);
+  font-size: Helvetica, sans-serif;
+  color: green;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.container-header {
+  background-color: rgb(120, 23, 23);
+  font-size: Helvetica, sans-serif;
+  color: blue;
+  color: red;
+  font-size: 35px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.button-base, .button-report {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.button-report {
+  background-color: red;
+}
+
+nav ul li a {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
+html,
+body {
+    height: 100%;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
