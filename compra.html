@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Compra</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="fotter.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
+        /* Agrega aquí el estilo de tu página */
         #mititulo {
             background-color: #4184b1;
             padding: 20px;
@@ -24,104 +27,258 @@
             align-items: center;
             justify-content: center;
         }
+
         .container-form {
             margin-top: 20px;
             margin-left: 20px;
         }
-        
-        .precios {
-        color: #c9baba; /* Color gris */
-    }
-    .precios h2 {
-        font-size: 16px; /* Tamaño de letra para el elemento h2 dentro de .precios */
-    }
 
+        .precios {
+            color: #c9baba;
+        }
+
+        .precios h2 {
+            font-size: 16px;
+        }
+
+        .btn-hamburguesa {
+            display: none;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .btn-hamburguesa {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu-activo {
+                background-color: rgba(201, 195, 195, 0.782);
+                border: 1px solid #000;
+                padding: 10px;
+                position: absolute;
+                top: 1px;
+                right: 0;
+                width: 200px;
+                z-index: 200;
+                box-sizing: border-box;
+                animation: slideDown 0.3s ease;
+            }
+
+            .menu-activo {
+                display: block !important;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+
+        }
+
+        #carrito {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-carrito {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            font-size: 18px;
+        }
+
+        .carrito-items {
+            padding: 10px;
+        }
+
+        .carrito-item {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .carrito-item img {
+            margin-right: 10px;
+            border-radius: 4px;
+            max-width: 80px;
+        }
+
+        .carrito-item-detalles {
+            flex-grow: 1;
+        }
+
+        .carrito-item-titulo {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .cantidad,
+        .precio {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .total-carrito {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-carrito {
+                font-size: 16px;
+            }
+
+            .carrito-item-titulo {
+                font-size: 14px;
+            }
+
+            .cantidad,
+            .precio {
+                font-size: 12px;
+            }
+
+            .total-carrito {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <h1 id="mititulo">Compu YME CompuCompras</h1>
-
-    <div class="container container-form mt-4">
-        <div class="accordion" id="elementosAComprarAccordion">
-            <div class="card" id="targeta">
-                <div class="card-header d-flex align-items-center justify-content-between" id="item1Heading">
-                    <h2 class="mb-0" id="elementoDeCompra">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#item1Collapse" aria-expanded="true" aria-controls="item1Collapse">
-                            Elementos a Comprar 1
-                        </button>
-                    </h2>
-                    <div class="precios"> 
-                        <h2 class="mb-0">
-                            $699.99
-                        </h2>
-                    </div> 
-                </div>    
-                <div id="item1Collapse" class="collapse show" aria-labelledby="item1Heading" data-parent="#elementosAComprarAccordion">
-                    <div class="card-body d-flex align-items-center">
-                        <div style="display: flex;" class="align-self-center">
-                            <img src="imagenes/computadoraEscritorio.webp" width="60 px">
-                            <div class="ml-2">
-                                <p>Computador Todo En Uno Hp I5-12va Ssd 512gb/8gb/all In One</p>
-                            </div>
-                        </div>
-                        <div class="ml-auto"> 
-                            <p>Precio: $699.99</p>
-                        </div>
-                    </div>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="container-logo">
+                    <i class="fa-solid fa-display"></i>
+                    <h1 class="logo"><a href="/">YME</a></h1>
                 </div>
-                <div class="card-header d-flex align-items-center justify-content-between" id="item2Heading">
-                    <h2 class="mb-0" id="elementoDeCompra">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" 
-                        data-target="#item2Collapse" aria-expanded="true" aria-controls="item2Collapse">
-                            Elementos a Comprar 2
-                        </button>
-                    </h2>
-                    <div class="precios"> 
-                        <h2 class="mb-0">
-                            $675.00
-                        </h2>
-                    </div> 
+                <div class="container-user">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-solid fa-heart"></i>
                 </div>
-                <div id="item2Collapse" class="collapse show" aria-labelledby="item1Heading" data-parent="#elementosAComprarAccordion">
-                    <div class="card-body d-flex align-items-center">
-                        <div style="display: flex;" class="align-self-center">
-                            <img src="imagenes/computadoraHP.webp" width="60 px">
-                            <div class="ml-2">
-                                <p>Computador Todo En Uno Hp I5 12va Ssd 1000gb/16gb/all In One</p>
-                            </div>
-                        </div>
-                        <div class="ml-auto"> 
-                            <p>Precio: $675.99</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                 
-
-            
-    </div>
-    <div class="card">
-        <div class="card-header d-flex align-items-center justify-content-between" id="agregarProductoHeading">
-            <h2 class="mb-0">
-                <button class="btn btn-link" type="button" id="agregarProductoBtn" onclick="agregarProducto()">
-                    Agregar más productos
+                <button class="btn-hamburguesa">
+                    <img src="imagenes/icono.webp" alt="Menú" style="width: 40px; height: 40px;">
                 </button>
-            </h2>
-        </div>
-    </div>   
-    
-    
-    <div class="card mt-4">
-        <div class="card-body d-flex align-items-center justify-content-between">
-            <div>
-                <h2 class="mb-0">Precio Total</h2>
-            </div>
-            <div class="precios">
-                <h2 id="precioTotal" class="mb-0">$0.00</h2>
             </div>
         </div>
+
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">TELÉFONOS</a></li>
+                    <li><a href="#">COMPUTADORAS</a></li>
+                    <li><a href="#">TABLETS</a></li>
+                    <li><a href="#">QUIENES SOMOS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var btnHamburguesa = document.querySelector(".btn-hamburguesa");
+                var menu = document.querySelector(".menu");
+
+                btnHamburguesa.addEventListener("click", function () {
+                    menu.classList.toggle("menu-activo");
+                });
+                document.addEventListener("click", function (event) {
+                    if (!menu.contains(event.target) && !btnHamburguesa.contains(event.target)) {
+                        menu.classList.remove("menu-activo");
+                    }
+                });
+                menu.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // Agregar un evento de clic al elemento con id "carrito"
+                document.getElementById("carrito").addEventListener("click", function () {
+                    // Redirigir a la página de compra.html
+                    window.location.href = "compra.html";
+                });
+            });
+
+        </script>
+    </header>
+    <div class="carrito" id="carrito">
+        <div class="header-carrito">
+            <h2>Tu Carrito</h2>
+        </div>
+        <div class="carrito-items"></div>
+
+        <div id="listaProductosCarrito" class="mb-4"></div>
     </div>
-</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtener el contenedor donde se mostrarán los productos del carrito
+            var listaProductosCarrito = document.getElementById("listaProductosCarrito");
+
+            // Obtener los datos de la URL
+            var params = new URLSearchParams(window.location.search);
+            var comprasCodificadas = params.get('compras');
+            var compras = JSON.parse(atob(comprasCodificadas));
+
+            // Recorrer la lista de compras y agregar cada producto al contenedor
+            for (var i = 0; i < compras.length; i++) {
+                var producto = compras[i];
+                var itemCarritoContenido = `
+        <div class="carrito-item" data-product-id="${producto.idProducto}">
+            <img src="${producto.imagenSrc}" width="80px" alt="">
+            <div class="carrito-item-detalles">
+                <span class="carrito-item-titulo">${producto.titulo}</span>
+                <div class="cantidad">
+                    ${producto.cantidad}
+                </div>
+                <div class="precio">${producto.precio}$</div>
+            </div>
+        </div>
+    `;
+
+                // Agregar el producto al contenedor
+                listaProductosCarrito.innerHTML += itemCarritoContenido;
+            }
+
+            // Calcular el total del carrito
+            var totalCarrito = 0;
+            for (var i = 0; i < compras.length; i++) {
+                totalCarrito += parseFloat(compras[i].precio) * parseInt(compras[i].cantidad);
+            }
+
+            // Agregar el total del carrito al final del contenedor
+            var totalCarritoHTML = `
+        <div class="total-carrito">
+            Total del Carrito: ${totalCarrito}$
+        </div>
+    `;
+
+            listaProductosCarrito.innerHTML += totalCarritoHTML;
+        });
+    </script>
 
 
     <div class="container container-form">
@@ -135,7 +292,8 @@
                                 <label for="name" class="col-form-label">Nombre</label>
                             </td>
                             <td>
-                                <input id='name' class="form-control" placeholder='Ingrese el nombre' type="text" name="name"/>
+                                <input id='name' class="form-control" placeholder='Ingrese el nombre' type="text"
+                                    name="name" />
                             </td>
                         </tr>
                         <tr>
@@ -143,7 +301,8 @@
                                 <label for="edad" class="col-form-label">Edad</label>
                             </td>
                             <td>
-                                <input id='edad' class="form-control" placeholder='Ingrese la edad' type="text" name="edad"/>
+                                <input id='edad' class="form-control" placeholder='Ingrese la edad' type="text"
+                                    name="edad" />
                             </td>
                         </tr>
                         <tr>
@@ -151,7 +310,8 @@
                                 <label for="direccion" class="col-form-label">Dirección</label>
                             </td>
                             <td>
-                                <input id='direccion' class="form-control" placeholder='Ingrese la direccion' type="text" name="direccion"/>
+                                <input id='direccion' class="form-control" placeholder='Ingrese la direccion'
+                                    type="text" name="direccion" />
                             </td>
                         </tr>
                         <tr>
@@ -159,7 +319,8 @@
                                 <label for='email' class="col-form-label">E-mail</label>
                             </td>
                             <td>
-                                <input id='email' name='email' class="form-control" placeholder='Ingrese un correo' type="text"/>
+                                <input id='email' name='email' class="form-control" placeholder='Ingrese un correo'
+                                    type="text" />
                             </td>
                         </tr>
                     </tbody>
@@ -167,96 +328,64 @@
 
                 <div class="form-group">
                     <label for="cardNumber">Número de Tarjeta</label>
-                    <input type="text" class="form-control" id="cardNumber" placeholder="**** **** **** ****">
+                    <input type="text" class="form-control" id="cardNumber" placeholder="**** **** **** ****" required>
                 </div>
-
+                
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="fecha">Fecha de vencimiento</label>
-                        <input type="text" class="form-control" id="fecha" placeholder="MM/YY">
+                        <input type="text" class="form-control" id="fecha" placeholder="MM/YY" required>
                     </div>
                 
                     <div class="form-group col-md-6">
                         <label for="codigo">Código de seguridad</label>
-                        <input type="text" class="form-control" id="codigo" placeholder="1234">
+                        <input type="text" class="form-control" id="codigo" placeholder="1234" required>
                     </div>
                 </div>
-            </div>                 
-            
-            <button type="submit" class="btn btn-primary">Pagar</button>
+                
+                <button type="submit" class="btn btn-primary">Pagar</button>
         </form>
     </div>
 
-    <script>
-        function agregarProducto() {
-            document.getElementById('precioTotal').textContent = '$0.00';
-            // Generar un precio aleatorio (puedes ajustar este rango según tus necesidades)
-            var nuevoPrecio = (Math.random() * (100 - 1) + 1).toFixed(2);
-            var elementosDeCompra = document.querySelectorAll('[id^="elementoDeCompra"]');
-            // Obtener el número actual de elementos a comprar
-            var numeroElementos = document.querySelectorAll('.card[id^="nuevoElemento"]').length +elementosDeCompra.length+ 1;
     
-            // Crear el nuevo elemento dinámicamente
-            var nuevoElementoHTML = `
-            <div class="card" id="nuevoElemento${numeroElementos}">
-                <div class="card-header d-flex align-items-center justify-content-between" id="nuevoItemHeading${numeroElementos}">
-                    <h2 class="mb-0" id="nuevoElementoDeCompra${numeroElementos}">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" 
-                            data-target="#nuevoItemCollapse${numeroElementos}" aria-expanded="true" 
-                            aria-controls="nuevoItemCollapse${numeroElementos}">
-                            Elemento a comprar ${numeroElementos}
-                        </button>
-                    </h2>
-                    <div class="precios"> 
-                        <h2 class="mb-0">
-                            $${nuevoPrecio}
-                        </h2>
-                    </div> 
-                </div>
-                <div id="nuevoItemCollapse${numeroElementos}" class="collapse show" 
-                    aria-labelledby="nuevoItemHeading${numeroElementos}" data-parent="#elementosAComprarAccordion">
-                    <div class="card-body d-flex align-items-center">
-                        <div style="display: flex;" class="align-self-center">
-                            <img src="ruta/a/tu/imagen.jpg" width="60 px">
-                            <div class="ml-2">
-                                <p>Descripción del nuevo producto</p>
-                            </div>
-                        </div>
-                        <div class="ml-auto"> 
-                            <p>Precio: $${nuevoPrecio}</p>
-                        </div>
+    <br><br>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>
+                            Dirección: Escuela Politecnica Nacional (EPN)
+                        </li>
+                        <li>Teléfono: 099999999</li>
+                        <li>EmaiL: YME@gmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
                     </div>
                 </div>
-            </div>`;
 
-        // Agregar el nuevo elemento al DOM
-        document.getElementById('elementosAComprarAccordion').insertAdjacentHTML('beforeend', nuevoElementoHTML);
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        // Calcular y actualizar el precio total
-        actualizarPrecioTotal();
-    }
 
-    function actualizarPrecioTotal() {
-    // Obtener todos los precios y sumarlos
-    var precios = document.querySelectorAll('.precios h2');
-    var precioTotal = 0;
 
-    precios.forEach(function (precio) {
-        // Obtener el número dentro del texto del precio
-        var numero = parseFloat(precio.textContent.replace('$', ''));
-        precioTotal += isNaN(numero) ? 0 : numero;
-    });
-
-    // Actualizar el precio total en el DOM
-    document.getElementById('precioTotal').textContent = '$' + precioTotal.toFixed(2);
-}
-</script>
-    
-    
 </body>
 
 </html>
-
-
-      
-
