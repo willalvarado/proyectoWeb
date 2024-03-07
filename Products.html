@@ -1,96 +1,292 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
-		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles_Products.css">
-    <script src="Js/ShoppingCart.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/styles.css">
     <title> Productos </title>
 </head>
+
 <body>
     <header>
-        <h1>PRODUCTOS</h1>
-    </header>
-    <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-            <div class="item">
-                <span class="titulo-item">Xiaomi 13T</span>
-                <img src="imagenes/Xiaomi_13t.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="10">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-id="11">
-                <span class="titulo-item">Samsung S21</span>
-                <img src="imagenes/Samsung_S21.png" alt="" class="img-item">
-                <span class="precio-item">$2.000</span>
-                <button class="boton-item" data-product-id="11">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Samsung A54</span>
-                <img src="imagenes/samsung-a54.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="12">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Samsung A15</span>
-                <img src="imagenes/samsung-a15.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="13">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Infiniti note 30 pro</span>
-                <img src="imagenes/infinix-note-30-pro.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="14">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">iphone 11</span>
-                <img src="imagenes/iphone-11.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="15">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">iphone 15</span>
-                <img src="imagenes/iphone-15.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="16">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">iphone 15 pro</span>
-                <img src="imagenes/iphone-15-pro.png" alt="" class="img-item">
-                <span class="precio-item">$1.000</span>
-                <button class="boton-item" data-product-id="17">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">iphone 14</span>
-                <img src="imagenes/iphone-14.png" alt="" class="img-item">
-                <span class="precio-item">$1.800</span>
-                <button class="boton-item" data-product-id="18">Agregar al Carrito</button>
-            </div>
-        </div>
-
-        <div class="carrito" id="carrito">
-            <div class="header-carrito">
-                <h2>Tu Carrito</h2>
-            </div>
-
-            <div class="carrito-items">
-            </div>
-            <div class="carrito-total">
-                <div class="fila">
-                    <strong>Tu Total</strong>
-                    <span class="carrito-precio-total">
-                        $120.000,00
-                    </span>
+        <div>
+            <div class="navbar">
+                <img src="imagenes/Logo.png" alt="" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Products.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="compra.html">Carrito</a></li>
+                </ul>
+                <a href="#" class="action_btn" onclick="irASeccion('1')">Cat&aacute;logo</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
-                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+            <div class="dropdown_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Products.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="compra.html">Carrito</a></li>
+                <li><a href="#" class="action_btn">Cat&aacute;logo</a></li>
             </div>
         </div>
-    </section>
+    </header>
+    <main>
+
+        <section class="container about">
+            <br>
+            <h2 class="subtitle">¿Cuáles con los beneficios de comprar en TecnoEmporium?</h2>
+            <p class="about__paragraph">
+                En TecnoEmporium, no solo te vendemos productos electrónicos; te ofrecemos una experiencia de compra que
+                supera tus expectativas. Descubre la diferencia hoy y únete a la comunidad de entusiastas tecnológicos
+                que confían en TecnoEmporium para sus necesidades digitales. ¡Bienvenido a la revolución tecnológica!
+            </p>
+
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./imagenes/SVG/Purchase.svg" class="about__icon">
+                    <h3 class="about__title">Variedad Inigualable</h3>
+                    <p class="about__paragrah">Encuentra todo lo que necesitas bajo un mismo techo, sin comprometer la calidad ni la
+                        innovación.</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./imagenes/SVG/Wallet.svg" class="about__icon">
+                    <h3 class="about__title">Compras Seguras</h3>
+                    <p class="about__paragrah">Puedes confiar en que tus datos personales y financieros están resguardados mientras exploras
+                        nuestro extenso catálogo de productos.</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./imagenes/SVG/Package.svg" class="about__icon">
+                    <h3 class="about__title">Envío Rápido y Confiable</h3>
+                    <p class="about__paragrah">Con nuestro servicio de envío rápido y confiable, recibirás tus productos en la puerta de tu
+                        hogar en tiempo récord. </p>
+                </article>
+            </div>
+        </section>
+
+        <h2 class="titulo">Nuestro producto</h2>
+        <section class="contenedor sobre-nosotros">
+            <div class="contenedor-sobre-nosotros">
+                <img src="imagenes/SVG/ilustracion2.svg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Asesoramiento Especializado</h3>
+                    <p>Nuestro equipo de expertos está a tu disposición para brindarte asesoramiento especializado. Desde recomendaciones de
+                        productos hasta soluciones a tus dudas tecnológicas, estamos aquí para hacer tu experiencia de compra más fácil y
+                        satisfactoria.</p>
+                    <h3><span>2</span>Política de Devoluciones sin Complicaciones</h3>
+                    <p>En TecnoEmporium, comprendemos que las expectativas pueden cambiar. Por eso, ofrecemos una política de devoluciones
+                        sin complicaciones. Si no estás completamente satisfecho con tu compra, estamos aquí para asegurarnos de que
+                        encuentres la solución perfecta.</p>
+                    <h3><span>3</span>Ofertas Exclusivas y Descuentos Irresistibles</h3>
+                    <p>Como agradecimiento por elegirnos, en TecnoEmporium te ofrecemos ofertas exclusivas y descuentos irresistibles.
+                        Mantente atento a nuestras promociones para disfrutar de precios especiales en tus productos tecnológicos favoritos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimony">
+            <div class="testimony__container container">
+                <img src="./imagenes/SVG/leftarrow.svg" class="testimony__arrow" id="before">
+
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle"> iPhone: Eleva tu Estilo de Vida Digital<span class="testimony__course">Explora el universo
+                                Apple</span></h2>
+                        <p class="testimony__review">Desde cámaras de última generación hasta potencia de procesamiento sin igual, estos
+                            dispositivos emblemáticos están diseñados para elevar tu estilo de vida digital. Descubre la sinfonía perfecta entre
+                            diseño elegante y rendimiento excepcional.</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="imagenes/Poster1.webp" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Samsung: Innovación en Cada Detalle<span class="testimony__course">Sumérgete en la innovación
+                                galáctica</span></h2>
+                        <p class="testimony__review">Desde smartphones con pantallas envolventes hasta tablets con tecnología punta, cada
+                            producto Samsung redefine los límites de la excelencia tecnológica. Descubre dispositivos que no solo cumplen sino
+                            que superan tus expectativas.</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="imagenes/Poster2.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">ASUS: Rendimiento Potente<span class="testimony__course"> Rendimiento y Estilo con la línea
+                                ASUS</span></h2>
+                        <p class="testimony__review">Ya sea que busques laptops ultraportátiles para la productividad diaria o poderosas
+                            máquinas para juegos, ASUS te ofrece tecnología de vanguardia sin compromisos. Domina el arte de la multitarea con
+                            productos diseñados para destacar.</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="imagenes/Poster3.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">iPad: Más que una Tablet, una Experiencia<span class="testimony__course">Diseño Elegante,
+                                Portabilidad Inigualable</span></h2>Desde el iPad estándar hasta el iPad Pro, cada dispositivo redefine la forma en que
+                                interactúas con la tecnología, ofreciendo un rendimiento excepcional y una experiencia de usuario sin igual.</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="imagenes/Poster4.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+
+                <img src="/imagenes/SVG/rightarrow.svg" class="testimony__arrow" id="next">
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <!-- Contenedor de elementos -->
+            <div class="contenedor-items" id="1">
+                <div class="item">
+                    <span class="titulo-item">Xiaomi 13T</span>
+                    <img src="imagenes/Xiaomi_13t.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="10">Agregar al Carrito</button>
+                </div>
+                <div class="item" data-id="11">
+                    <span class="titulo-item">Samsung S21</span>
+                    <img src="imagenes/Samsung_S21.png" alt="" class="img-item">
+                    <span class="precio-item">$2.000</span>
+                    <button class="boton-item" data-product-id="11">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Samsung A54</span>
+                    <img src="imagenes/samsung-a54.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="12">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Samsung A15</span>
+                    <img src="imagenes/samsung-a15.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="13">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Infiniti note 30 pro</span>
+                    <img src="imagenes/infinix-note-30-pro.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="14">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">iphone 11</span>
+                    <img src="imagenes/iphone-11.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="15">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">iphone 15</span>
+                    <img src="imagenes/iphone-15.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="16">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">iphone 15 pro</span>
+                    <img src="imagenes/iphone-15-pro.png" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item" data-product-id="17">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">iphone 14</span>
+                    <img src="imagenes/iphone-14.png" alt="" class="img-item">
+                    <span class="precio-item">$1.800</span>
+                    <button class="boton-item" data-product-id="18">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="carrito" id="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+
+                <div class="carrito-items">
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">
+                            $120.000,00
+                        </span>
+                    </div>
+                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">TecnoEmporium</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="index.html" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="Products.html" class="nav__links">Products</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="contacto.html" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+                <h2 class="footer__newsletter">Suscribete a TecnoEmporium</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="https://www.instagram.com/rcell_ec/" class="footer__icons"><img src="imagenes/SVG/Instagram.svg" class="footer__img"></a>
+                <a href="https://www.facebook.com/iphonemarketec" class="footer__icons"><img src="imagenes/SVG/Facebook.svg" class="footer__img"></a>
+                <a href="https://www.youtube.com/watch?v=GsJmmh7N8-o" class="footer__icons"><img src="imagenes/SVG/Youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; TecnoEmporium</h3>
+        </section>
+    </footer>
+
+    <script>
+        function irASeccion(idSeccion) {
+            var seccion = document.getElementById(idSeccion);
+            if (seccion) {
+                seccion.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+    <script src="Js/ShoppingCart.js" async></script>
+    <script src="./js/slider.js"></script>
+    <script src="Js/Responsive.js"></script>
 </body>
+
 </html>
