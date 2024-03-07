@@ -945,3 +945,34 @@ main .sobre-nosotros{
         margin-left: 0;
     }
 }
+
+
+/*CATEGORIAS*/
+.trabajos{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+.trabajos h2{
+    text-align: center;
+}
+.trabajos nav{
+    text-align: center;
+    margin: 30px 0;
+}
+.trabajos nav a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    color: #007be5;
+    font-weight: bold;
+    padding: 3px 10px;
+    border: 3px solid transparent;
+}
+.trabajos nav a:hover{
+    border: 3px solid #009688;
+}
+/* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
+.borde{
+    border: 3px solid #009688 !important;  
+}

@@ -155,63 +155,181 @@
                 <img src="/imagenes/SVG/rightarrow.svg" class="testimony__arrow" id="next">
             </div>
         </section>
-
-        <section class="contenedor">
-            <!-- Contenedor de elementos -->
+        <!--PRODUCTOS-->
+        <section >
+            <section class="trabajos" id="trabajos">
+            <h2>Mis Trabajos</h2>
+            <nav>
+                <a href="javascript:void(0)" class="borde" id="item" onclick="verCategoria('item')">Todos</a>
+                <a href="javascript:void(0)" class="" id="cel" onclick="verCategoria('cel')">Celulares</a>
+                <a href="javascript:void(0)" class="" id="com" onclick="verCategoria('com')">Computadora</a>
+                <a href="javascript:void(0)" class="" id="acc" onclick="verCategoria('acc')">Accesorios</a>
+            </nav>
+            </section>
+            <section class="contenedor" id="contenedor">
+                <!-- Contenedor de elementos -->
             <div class="contenedor-items" id="1">
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">Xiaomi 13T</span>
                     <img src="imagenes/Xiaomi_13t.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="10">Agregar al Carrito</button>
                 </div>
-                <div class="item" data-id="11">
+                <div class="item cel" data-id="11">
                     <span class="titulo-item">Samsung S21</span>
                     <img src="imagenes/Samsung_S21.png" alt="" class="img-item">
                     <span class="precio-item">$2.000</span>
                     <button class="boton-item" data-product-id="11">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">Samsung A54</span>
                     <img src="imagenes/samsung-a54.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="12">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">Samsung A15</span>
                     <img src="imagenes/samsung-a15.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="13">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">Infiniti note 30 pro</span>
                     <img src="imagenes/infinix-note-30-pro.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="14">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">iphone 11</span>
                     <img src="imagenes/iphone-11.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="15">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">iphone 15</span>
                     <img src="imagenes/iphone-15.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="16">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">iphone 15 pro</span>
                     <img src="imagenes/iphone-15-pro.png" alt="" class="img-item">
                     <span class="precio-item">$1.000</span>
                     <button class="boton-item" data-product-id="17">Agregar al Carrito</button>
                 </div>
-                <div class="item">
+                <div class="item cel">
                     <span class="titulo-item">iphone 14</span>
                     <img src="imagenes/iphone-14.png" alt="" class="img-item">
                     <span class="precio-item">$1.800</span>
                     <button class="boton-item" data-product-id="18">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">Apple Airpods 2 Pro</span>
+                    <img src="imagenes/AirPods2Pro.png" alt="" class="img-item">
+                    <span class="precio-item">$320</span>
+                    <button class="boton-item" data-product-id="19">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">Apple cable lightning USB</span>
+                    <img src="imagenes/AppleCable.png" alt="" class="img-item">
+                    <span class="precio-item">$25</span>
+                    <button class="boton-item" data-product-id="20">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">Apple Airpods Max</span>
+                    <img src="imagenes/AirPodsMax.png" alt="" class="img-item">
+                    <span class="precio-item">$560</span>
+                    <button class="boton-item" data-product-id="21">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">Apple Airpods 3rd Gen</span>
+                    <img src="imagenes/AirPods3rd.png" alt="" class="img-item">
+                    <span class="precio-item">$560</span>
+                    <button class="boton-item" data-product-id="22">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">Lenovo V15</span>
+                    <img src="imagenes/LenovoV15.png" alt="" class="img-item">
+                    <span class="precio-item">$852</span>
+                    <button class="boton-item" data-product-id="23">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">HP Victus Gaming I5</span>
+                    <img src="imagenes/HP Victus.png" alt="" class="img-item">
+                    <span class="precio-item">$1.210</span>
+                    <button class="boton-item" data-product-id="24">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">ACER AN515-46-R68T GAMING</span>
+                    <img src="imagenes/AcerAN515.png" alt="" class="img-item">
+                    <span class="precio-item">$1.414</span>
+                    <button class="boton-item" data-product-id="25">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">HP 215</span>
+                    <img src="imagenes/Hp215.png" alt="" class="img-item">
+                    <span class="precio-item">$830</span>
+                    <button class="boton-item" data-product-id="26">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">ASUS VIVOBOOK 15</span>
+                    <img src="imagenes/AsusVivo.png" alt="" class="img-item">
+                    <span class="precio-item">$681</span>
+                    <button class="boton-item" data-product-id="27">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">LENOVO IP1 15AMN</span>
+                    <img src="imagenes/LenovoIP1.png" alt="" class="img-item">
+                    <span class="precio-item">$571</span>
+                    <button class="boton-item" data-product-id="28">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">ASUS TUF GAMING F15</span>
+                    <img src="imagenes/AsusTUF.png" alt="" class="img-item">
+                    <span class="precio-item">$1.027</span>
+                    <button class="boton-item" data-product-id="29">Agregar al Carrito</button>
+                </div>
+                <div class="item com">
+                    <span class="titulo-item">LENOVO IDEAPAD 3</span>
+                    <img src="imagenes/LENOVO3.png" alt="" class="img-item">
+                    <span class="precio-item">$931</span>
+                    <button class="boton-item" data-product-id="30">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">APPLE WATCH SERIE SE</span>
+                    <img src="imagenes/AppleWatch1.png" alt="" class="img-item">
+                    <span class="precio-item">$404</span>
+                    <button class="boton-item" data-product-id="31">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">KIESLECT WATCH KR PRO LTD</span>
+                    <img src="imagenes/KIESLECT.png" alt="" class="img-item">
+                    <span class="precio-item">$404</span>
+                    <button class="boton-item" data-product-id="32">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">APPLE WATCH SERIE SE</span>
+                    <img src="imagenes/APPLESE.png" alt="" class="img-item">
+                    <span class="precio-item">$443</span>
+                    <button class="boton-item" data-product-id="33">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">APPLE WATCH SERIE 9</span>
+                    <img src="imagenes/Apple9.png" alt="" class="img-item">
+                    <span class="precio-item">$713</span>
+                    <button class="boton-item" data-product-id="34">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">ipad pro</span>
+                    <img src="imagenes/ipadpro.webp" alt="" class="img-item">
+                    <span class="precio-item">$1.479</span>
+                    <button class="boton-item" data-product-id="35">Agregar al Carrito</button>
+                </div>
+                <div class="item acc">
+                    <span class="titulo-item">ipad mini</span>
+                    <img src="imagenes/iPad_mini.jpg" alt="" class="img-item">
+                    <span class="precio-item">$698</span>
+                    <button class="boton-item" data-product-id="36">Agregar al Carrito</button>
                 </div>
             </div>
 
@@ -232,6 +350,8 @@
                     <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
                 </div>
             </div>
+            </section>
+            
         </section>
     </main>
 
@@ -287,6 +407,7 @@
     <script src="Js/ShoppingCart.js" async></script>
     <script src="./js/slider.js"></script>
     <script src="Js/Responsive.js"></script>
+    <script src="Js/filter.js"></script>
 </body>
 
 </html>
