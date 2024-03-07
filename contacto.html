@@ -1,138 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<title>Contacto</title>
-	<link rel="stylesheet" href="CSS/contact.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
-	<header>
-		<div>
-			<div class="navbar">
-				<img src="imagenes/Logo.png" alt="" class="logo">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="Products.html">Productos</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
-					<li><a href="compra.html">Carrito</a></li>
-				</ul>
-				<a href="#" class="action_btn">Catálogo</a>
-				<div class="toggle_btn">
-					<i class="fa-solid fa-bars"></i>
-				</div>
-			</div>
-			<div class="dropdown_menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="Products.html">Productos</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
-				<li><a href="compra.html">Carrito</a></li>
-				<li><a href="#" class="action_btn">Catálogo</a></li>
-			</div>
-		</div>
-	</header>
-
-	<main>
-		<h1>NOSOTROS</h1>
-		<section>
-			<div class="container">
-				<div class="form-container">
-					<form action="guardar_comentarios.py" method="post">
-						<label for="nombre">Nombre completo*</label>
-						<input type="text" id="nombre" name="nombre" required>
-						<label for="email">Email*</label>
-						<input type="email" id="email" name="email" required>
-						<label for="area">Deseo contactar con el área de *</label>
-						<select id="area" name="area" required>
-							<option value="">--Selecciona una opción --</option>
-							<option value="cafebreria">Ventas</option>
-							<option value="ompeduto">Gerencia</option>
-							<option value="elpendulo">Técnica</option>
-						</select>
-						<label for="comentarios">Comentarios*</label>
-						<textarea id="comentarios" name="comentarios" required></textarea>
-						<input type="submit" value="Enviar">
-					</form>
-				</div>
-				<div class="text-container">
-					<p>CONTÁCTANOS</p>
-					<p>¡Valoramos tu opinión! En nuestra constante búsqueda de mejorar tu experiencia, te
-						invitamos a compartir tus sugerencias o inquietudes a través de nuestra página web. Tu
-						retroalimentación es fundamental para perfeccionar nuestros servicios y asegurarnos de
-						que cumplamos con tus expectativas. Nosotros estamos aquí para escucharte, así que no
-						dudes en ponerte en contacto. Juntos, construimos un camino hacia la excelencia.
-						¡Esperamos tus comentarios!</p>
-				</div>
-			</div>
-		</section>
-		
-		<section class="knowledge">
-            <div class="knowledge__container container">
-                <div class="knowledege__texts">
-                    <h2 class="subtitle">Sobre Nosotros. ¡Conectando con la Innovación!</h2>
-					<p class="knowledge__paragraph">En el corazón de TecnoEmporium late la misión de acercar la última tecnología a
-						tus manos. Nos esforzamos por ser el destino tecnológico preferido, ofreciendo no solo productos de alta calidad,
-						sino también una experiencia de compra que te inspire.</a>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="container-logo">
+                    <i class="fa-solid fa-display"></i>
+                    <h1 class="logo"><a href="/">YME</a></h1>
                 </div>
+                <div class="container-user">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <div class="content-shopping-cart">
+                        <span class="text">Carrito</span>
+                        <span class="number">(0)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">TEL&Eacute;FONOS</a></li>
+                    <li><a href="#">COMPUTADORAS</a></li>
+                    <li><a href="#">TABLETS</a></li>
+                    <li><a href="#">QUIENES SOMOS</a></li>
+                </ul>
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
 
-                <figure class="knowledge__picture">
-                    <img src="imagenes/AboutUsBanner.jpg" class="knowledge__img">
-                </figure>
+    <main class="main-content">
+        <br>
+        <section class="container specials">
+            <div class="container-products">
+                <div class="card-product">
+                    <div class="container">
+                        <div class="form-container">
+                            <form action="" method="post" onsubmit="enviarComentario(event)">
+                                <label for="nombre">Nombre completo*</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="area">Deseo contactar con el área de *</label>
+                                <select id="area" name="area" required>
+                                    <option value="">--Selecciona una opción --</option>
+                                    <option value="Ventas">Ventas</option>
+                                    <option value="Gerencia">Gerencia</option>
+                                    <option value="Técnica">Técnica</option>
+                                </select>
+                                <label for="comentarios">Comentarios*</label>
+                                <textarea id="comentarios" name="comentarios" required></textarea>
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                        <div class="text-container">
+                            <p>CONTÁCTANOS</p>
+                            <p>¡Valoramos tu opinión! En nuestra constante búsqueda de mejorar tu experiencia, te
+                                invitamos a compartir
+                                tus sugerencias o inquietudes a través de nuestra página web. Tu retroalimentación es
+                                fundamental para
+                                perfeccionar nuestros servicios y asegurarnos de que cumplamos con tus expectativas.
+                                Nosotros estamos
+                                aquí para escucharte, así que no dudes en ponerte en contacto. Juntos, construimos un
+                                camino hacia la
+                                excelencia. ¡Esperamos tus comentarios!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-	</main>
+        <br>
+        <br>
+    </main>
 
-	<footer class="footer">
-		<section class="footer__container container">
-			<nav class="nav nav--footer">
-				<h2 class="footer__title">TecnoEmporium</h2>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>
+                            Dirección: Escuela Politecnica Nacional (EPN)
+                        </li>
+                        <li>Teléfono: 099999999</li>
+                        <li>EmaiL: YME@gmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-				<ul class="nav__link nav__link--footer">
-					<li class="nav__items">
-						<a href="index.html" class="nav__links">Inicio</a>
-					</li>
-					<li class="nav__items">
-						<a href="Products.html" class="nav__links">Products</a>
-					</li>
-					<li class="nav__items">
-						<a href="contacto.html" class="nav__links">Contacto</a>
-					</li>
-					<li class="nav__items">
-						<a href="#" class="nav__links">Blog</a>
-					</li>
-				</ul>
-			</nav>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script>
+        function enviarComentario(event) {
+        event.preventDefault();
 
-			<form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
-				<h2 class="footer__newsletter">Suscribete a TecnoEmporium</h2>
-				<div class="footer__inputs">
-					<input type="email" placeholder="Email:" class="footer__input" name="_replyto">
-					<input type="submit" value="Registrate" class="footer__submit">
-				</div>
-			</form>
-		</section>
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const area = document.getElementById('area').value;
+        const comentarios = document.getElementById('comentarios').value;
 
-		<section class="footer__copy container">
-			<div class="footer__social">
-				<a href="https://www.instagram.com/rcell_ec/" class="footer__icons"><img
-						src="imagenes/SVG/Instagram.svg" class="footer__img"></a>
-				<a href="https://www.facebook.com/iphonemarketec" class="footer__icons"><img
-						src="imagenes/SVG/Facebook.svg" class="footer__img"></a>
-				<a href="https://www.youtube.com/watch?v=GsJmmh7N8-o" class="footer__icons"><img
-						src="imagenes/SVG/Youtube.svg" class="footer__img"></a>
-			</div>
+        const data = {
+            nombre: nombre,
+            email: email,
+            area: area,
+            comentarios: comentarios
+        };
 
-			<h3 class="footer__copyright">Derechos reservados &copy; TecnoEmporium</h3>
-		</section>
-	</footer>
-
-	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
-	<script src="Js/Responsive.js"></script>
+        fetch('http://127.0.0.1:5000/guardar_comentario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Respuesta del servidor:', data);
+                // Restablecer los valores del formulario después de enviar
+                document.getElementById('nombre').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('area').value = '';
+                document.getElementById('comentarios').value = '';
+            })
+            .catch(error => {
+                console.error('Error al enviar comentario:', error);
+            });
+    }
+    </script>
 </body>
 
 </html>
