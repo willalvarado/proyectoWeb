@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <title>Compra</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/fotter.css" />
+   
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -54,22 +56,7 @@
                 display: none;
             }
 
-            .menu-activo {
-                background-color: rgba(201, 195, 195, 0.782);
-                border: 1px solid #000;
-                padding: 10px;
-                position: absolute;
-                top: 1px;
-                right: 0;
-                width: 200px;
-                z-index: 200;
-                box-sizing: border-box;
-                animation: slideDown 0.3s ease;
-            }
-
-            .menu-activo {
-                display: block !important;
-            }
+           
 
             @keyframes slideDown {
                 from {
@@ -168,36 +155,28 @@
 
 <body>
     <header>
-        <div class="container-hero">
-            <div class="container hero">
-                <div class="container-logo">
-                    <i class="fa-solid fa-display"></i>
-                    <h1 class="logo"><a href="/">YME</a></h1>
-                </div>
-                <div class="container-user">
-                    <i class="fa-regular fa-user"></i>
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <button class="btn-hamburguesa">
-                    <img src="imagenes/icono.webp" alt="Menú" style="width: 40px; height: 40px;">
-                </button>
-            </div>
-        </div>
-
-        </div>
-
-        <div class="container-navbar">
-            <nav class="navbar container">
-                <i class="fa-solid fa-bars"></i>
-                <ul class="menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">TELÉFONOS</a></li>
-                    <li><a href="#">COMPUTADORAS</a></li>
-                    <li><a href="#">TABLETS</a></li>
-                    <li><a href="#">QUIENES SOMOS</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div>
+			<div class="navbar">
+				<img src="imagenes/Logo.png" alt="" class="logo">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Products.html">Productos</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="compra.html">Carrito</a></li>
+				</ul>
+				<a href="#" class="action_btn">Catálogo</a>
+				<div class="toggle_btn">
+					<i class="fa-solid fa-bars"></i>
+				</div>
+			</div>
+			<div class="dropdown_menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="Products.html">Productos</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="compra.html">Carrito</a></li>
+				<li><a href="#" class="action_btn">Catálogo</a></li>
+			</div>
+		</div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var btnHamburguesa = document.querySelector(".btn-hamburguesa");
@@ -350,39 +329,51 @@
     
     <br><br>
     <footer class="footer">
-        <div class="container container-footer">
-            <div class="menu-footer">
-                <div class="contact-info">
-                    <p class="title-footer">Información de Contacto</p>
-                    <ul>
-                        <li>
-                            Dirección: Escuela Politecnica Nacional (EPN)
-                        </li>
-                        <li>Teléfono: 099999999</li>
-                        <li>EmaiL: YME@gmail.com</li>
-                    </ul>
-                    <div class="social-icons">
-                        <span class="facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </span>
-                        <span class="instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </span>
-                    </div>
-                </div>
+		<section class="footer__container container">
+			<nav class="nav nav--footer">
+				<h2 class="footer__title">TecnoEmporium</h2>
 
-                <div class="information">
-                    <p class="title-footer">Información</p>
-                    <ul>
-                        <li><a href="#">Acerca de Nosotros</a></li>
-                        <li><a href="#">Politicas de Privacidad</a></li>
-                        <li><a href="#">Términos y condiciones</a></li>
-                        <li><a href="#">Contactános</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+				<ul class="nav__link nav__link--footer">
+					<li class="nav__items">
+						<a href="index.html" class="nav__links">Inicio</a>
+					</li>
+					<li class="nav__items">
+						<a href="Products.html" class="nav__links">Products</a>
+					</li>
+					<li class="nav__items">
+						<a href="contacto.html" class="nav__links">Contacto</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__links">Blog</a>
+					</li>
+				</ul>
+			</nav>
+
+			<form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+				<h2 class="footer__newsletter">Suscribete a TecnoEmporium</h2>
+				<div class="footer__inputs">
+					<input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+					<input type="submit" value="Registrate" class="footer__submit">
+				</div>
+			</form>
+		</section>
+
+		<section class="footer__copy container">
+			<div class="footer__social">
+				<a href="https://www.instagram.com/rcell_ec/" class="footer__icons"><img
+						src="imagenes/SVG/Instagram.svg" class="footer__img"></a>
+				<a href="https://www.facebook.com/iphonemarketec" class="footer__icons"><img
+						src="imagenes/SVG/Facebook.svg" class="footer__img"></a>
+				<a href="https://www.youtube.com/watch?v=GsJmmh7N8-o" class="footer__icons"><img
+						src="imagenes/SVG/Youtube.svg" class="footer__img"></a>
+			</div>
+
+			<h3 class="footer__copyright">Derechos reservados &copy; TecnoEmporium</h3>
+		</section>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+	<script src="Js/Responsive.js"></script>
 
 
 
