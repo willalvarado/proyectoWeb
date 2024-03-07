@@ -13,12 +13,37 @@ conn = psycopg2.connect(
     password="1234"
 )
 
+# Crear un cursor para ejecutar consultas
+cursor = conn.cursor()
+
+# Ruta para recibir los comentarios del formulario como JSON
+@app.route('/guardar_comentario', methods=['POST'])
+def guardar_comentario():
+    if request.method == 'POST':
+        try:
+            # Obtener datos JSON del cuerpo de la solicitud
+            data = request.get_json()
+
+            nombre = data.get('nombre')
+            email = data.get('email')
+            area = data.get('area')
+            comentarios = data.get('comentarios')
+
+            cursor.execute("INSERT INTO contact (nombre, email, area, comentarios) VALUES (%s, %s, %s, %s)",
+                           (nombre, email, area, comentarios))
+
+            conn.commit()
+
+            return jsonify({'status': 'Comentario guardado exitosamente'})
+
+        except Exception as e:
+            return jsonify({'error': f'Error al guardar el comentario: {str(e)}'})
+
 # Manejar la solicitud POST para guardar las compras
 @app.route('/guardar_compras', methods=['POST'])
 def guardar_compras():
     try:
         data = request.json
-        cursor = conn.cursor()
         id_usuario = 999
 
         # Crear una nueva factura
@@ -36,12 +61,11 @@ def guardar_compras():
                         (id_factura, id_usuario, producto_id, cantidad, precio, subtotal))
 
         conn.commit()
-        cursor.close()
 
         return jsonify({"mensaje": "Datos guardados exitosamente."})
 
     except Exception as e:
-        return jsonify({"error": f"Error al guardar los datos: {str(e)}"})
+        return jsonify({"error": f"Error al guardar los datos de compras: {str(e)}"})
 
 
 if __name__ == '__main__':
